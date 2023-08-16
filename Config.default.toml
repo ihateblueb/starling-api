@@ -1,0 +1,11 @@
+# basics
+name = "Starling"
+id = "starling_0"
+
+# server
+bind_url = "127.0.0.1"
+bind_port = "3000"
+
+# authentication
+signin = true
+registration = true

@@ -15,6 +15,7 @@ async fn main() -> std::io::Result<()> {
         App::new()
             // auth
             .service(auth::v1_auth_validation)
+            .service(auth::v1_auth_session)
             .service(auth::v1_auth_login)
             .service(auth::v1_auth_logout)
 
@@ -33,7 +34,7 @@ async fn main() -> std::io::Result<()> {
             .service(receive::v1_receive_status)
             .service(receive::v1_receive_config)
     })
-    .bind(("127.0.0.1", 8080))?
+    .bind(("127.0.0.1", 3000))?
     .run()
     .await
 }
